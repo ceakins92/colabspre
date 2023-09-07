@@ -1,6 +1,6 @@
 alembic==1.11.1
 autopep8==2.0.2
-axios==0.4.0
+axios
 blinker==1.6.2
 certifi==2022.12.7
 cffi==1.15.1
