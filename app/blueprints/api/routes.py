@@ -57,9 +57,9 @@ def get_marvel_character(name):
             extension = data["data"]["results"][0]["thumbnail"]["extension"]
         # - Format Variables as Strings========
             name_title = f'<strong>{char_name}</strong>'
-            desc_title = f'<font color="white">Description:</font> {description}'
-            comic_num = f'<font color="white">Comics Appeared In:</font> {comics_avail}'
-            comic_res = f'<font color="white">{char_name} Comic Collection via</font><font color="red"> MARVEL</font><font color="white">:</font><br/><a href="{comic_resource}" target="_blank">{comic_resource}</a>'
+            desc_title = f'<font color="black">Description:</font> {description}'
+            comic_num = f'<font color="black">Comics Appeared In:</font> {comics_avail}'
+            comic_res = f'<font color="black">{char_name} Comic Collection via</font><font color="red"> MARVEL</font><font color="white">:</font><br/><a href="{comic_resource}" target="_blank">{comic_resource}</a>'
             thumbnail = f"{thumbnail}.{extension}"
         # - Return Data=============
             package = {"Character Name": name_title, "Description (if available)": desc_title, "Comics Appeared In": comic_num, "Comic Collection via Marvel": comic_res,"thumbnail": thumbnail}

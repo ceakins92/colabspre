@@ -33,7 +33,7 @@
                 <form method="POST" action="{{ url_for('api.char_page')}}">
                     <label for="search_char">Search for a MARVEL character</label>
                     <input type="text" id="search_char" placeholder="Character Name" name="search_char" required>
-                    <button type="submit">Search</button>
+                    <button class="btn btn-dark" type="submit">Search</button>
                 </form>
                 <br /><br />
             </center>
@@ -45,7 +45,7 @@
                 <div class="col text-center">
                     <center>
                         <hr>
-                        <font style="color:yellow">Character Located!</font><br><br>
+                        <font style="color:rgb(6, 183, 253)"><strong>Character Located!</strong></font><br><br>
                         <h2>{{ data['Character Name'] }}</h2>
                         <img src="{{ data['thumbnail'] }}" alt="{{ data['name']}}" width="500px"
                             class="img-fluid"><br><br>
@@ -107,7 +107,7 @@
                     interfaces available- which I did not. If you have any questions, please reach out to me!</p>
                     <br><br>
                 </small>
-                <center><a class="btn btn-outline-danger" href="{{ url_for('auth.get_contact') }}" id="splash-btn"
+                <center><a class="btn btn-dark" href="{{ url_for('auth.get_contact') }}" id="splash-btn"
                         role="button">Contact Me</a></center>
                 <br><br>
                 <br><br>

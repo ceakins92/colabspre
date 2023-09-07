@@ -80,7 +80,7 @@ def get_contact():
         res = pd.DataFrame({'name': name, 'email': email, 'subject': subject, 'message': message}, index=[0])
         res.to_csv('./contactusMessage.csv')
         flash('Message Sent!', 'success')
-        return redirect(url_for('social.user_page', username=current_user.username))
+        return redirect(url_for('main.home'))
     else:
         return render_template('contact.jinja', form=form)
 
@@ -127,9 +127,9 @@ def get_marvel_comic(title):
                   "View at Marvel": comic_resource, "thumbnail": thumbnail})
             # FORMAT VARIABLES FOR RENDERING ============================
             dis_title = f'<strong>{title_name}</strong>'
-            dis_desc = f'<font color="white">Description:</font> {description}'
-            dis_date = f'<font color="white">Available Date:</font> {on_sale}'
-            dis_link = f'<font color="white">{title_name} Comic Collection via</font><font color="red"> MARVEL</font><font color="white">:</font><br/><a href="{comic_resource}" target="_blank">{comic_resource}</a>'
+            dis_desc = f'<font color="black">Description:</font> {description}'
+            dis_date = f'<font color="black">Available Date:</font> {on_sale}'
+            dis_link = f'<font color="black">{title_name} Comic Collection via</font><font color="red"> MARVEL</font><font color="black">:</font><br/><a href="{comic_resource}" target="_blank">{comic_resource}</a>'
             thumbnail = f"{thumbnail}"
             # Return Formatted Variables ============================
             add_fave.update({"title": title_name, "Description": description, "First Available": on_sale, "View at Marvel": comic_resource, "thumbnail": thumbnail})
