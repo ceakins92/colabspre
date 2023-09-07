@@ -18,7 +18,6 @@ from app import db
 
 # - ROUTE FOR COMIC SEARCH PAGE ===========================================
 @bp.route('/comic_search')
-@login_required
 def comic_search_page():
     return render_template('comic_search.jinja')
 
@@ -145,7 +144,6 @@ def get_marvel_comic(title):
 # COMIC SEARCH ROUTE/FUNCTION =========================================
 # ERROR HANDLING FOR SEARCH FORM ======================================
 @bp.route('/comic_search', methods=['GET','POST'])
-@login_required
 def title_page_post():
     if request.method == 'POST':
         title = request.form.get('search_title')

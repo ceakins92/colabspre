@@ -15,7 +15,6 @@ from app.blueprints.api.helpers import token_required
 # - ROUTE FOR char_page ===================================================
 
 @bp.route('/char_page')
-@login_required
 def char_page():
     return render_template('char_page.jinja')
 
@@ -77,7 +76,6 @@ def get_marvel_character(name):
 # User input and error handling ========================================
 
 @bp.route('/char_page', methods=['GET','POST'])
-@login_required
 def char_page_post():
     if request.method == 'POST':
         name = request.form.get('search_char')
